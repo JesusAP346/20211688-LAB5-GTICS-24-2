@@ -38,6 +38,12 @@ public class ViajesController {
 
         return "viajesLista";
     }
+    @GetMapping({"/mascotas",})
+    public String mostrarMascotas(Model model){
+
+        return "mascotas";
+    }
+
     @GetMapping({"/nuevoViaje",})
     public String crearViaje(Model model){
         List<Persona> listaPersonas = personaRepository.findAll();
